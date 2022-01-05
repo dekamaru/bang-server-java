@@ -5,7 +5,7 @@ public class RequestResponse extends Response {
     private boolean success;
 
     public RequestResponse(String id, boolean success) {
-        super(Type.RESPONSE);
+        super(ResponseType.RESPONSE);
         this.id = id;
         this.success = success;
     }

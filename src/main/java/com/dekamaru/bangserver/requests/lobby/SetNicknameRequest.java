@@ -1,4 +1,4 @@
-package com.dekamaru.bangserver.requests;
+package com.dekamaru.bangserver.requests.lobby;
 
 public class SetNicknameRequest {
     private String nickname;

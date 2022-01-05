@@ -1,18 +1,18 @@
 package com.dekamaru.bangserver.responses;
 
 public abstract class Response {
-    public enum Type {
+    public enum ResponseType {
         RESPONSE,
         EVENT
     }
 
-    private final Type type;
+    private final ResponseType type;
 
-    public Response(Type type) {
+    public Response(ResponseType type) {
         this.type = type;
     }
 
-    public Type getType() {
+    public ResponseType getType() {
         return type;
     }
 }
