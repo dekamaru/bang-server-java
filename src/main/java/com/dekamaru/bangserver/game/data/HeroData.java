@@ -4,7 +4,6 @@ import com.dekamaru.bangserver.game.models.Hero;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public class HeroData {
@@ -26,11 +25,4 @@ public class HeroData {
             new Hero(Hero.Type.BART, 4),
             new Hero(Hero.Type.DUKE, 4)
     ));
-
-    public static List<Hero> getShuffledHeroes(int count) {
-        var shuffledList = new ArrayList<>(list);
-        Collections.shuffle(shuffledList);
-
-        return shuffledList.subList(0, count - 1);
-    }
 }

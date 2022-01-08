@@ -44,15 +44,17 @@ public class Lobby {
     public void join(Connection player) {
         this.connections.add(player);
         player.setCurrentLobby(this);
+        readyTable.put(player, false);
     }
 
     public void leave(Connection player) {
         this.connections.remove(player);
         player.setCurrentLobby(null);
+        readyTable.remove(player);
     }
 
     public boolean markAsReady(Connection player) {
-        var ready = !readyTable.getOrDefault(player, false);
+        var ready = !readyTable.get(player);
         readyTable.put(player, ready);
 
         return ready;

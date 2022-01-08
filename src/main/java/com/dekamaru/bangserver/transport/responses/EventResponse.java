@@ -5,6 +5,7 @@ public abstract class EventResponse extends Response {
         PLAYER_JOINED_LOBBY,
         PLAYER_LEFT_LOBBY,
         PLAYER_READY_STATE,
+        ROLE_REVEAL
     }
 
     private EventType event;

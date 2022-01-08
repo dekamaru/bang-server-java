@@ -7,7 +7,6 @@ import com.dekamaru.bangserver.game.models.card.WeaponCard;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public class CardData {
@@ -95,11 +94,4 @@ public class CardData {
             new ActionCard(Card.Suit.SPADES, Card.RANK_QUEEN, ActionCard.Type.SHOP),
             new ActionCard(Card.Suit.CLUBS, 9, ActionCard.Type.SHOP)
     ));
-
-    public static List<Card> getShuffledCards() {
-        var shuffledList = new ArrayList<>(list);
-        Collections.shuffle(shuffledList);
-
-        return shuffledList;
-    }
 }
