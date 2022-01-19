@@ -155,6 +155,10 @@ public class LobbyController implements Controller {
             return new ErrorRequestResponse(command.id, "Nickname already set");
         }
 
+        if (null == command.parameters) {
+            return new ErrorRequestResponse(command.id, "Invalid request");
+        }
+
         try {
             var request = objectMapper.readValue(command.parameters.toString(), SetNicknameRequest.class);
             if (request.getNickname().trim().isEmpty()) {
